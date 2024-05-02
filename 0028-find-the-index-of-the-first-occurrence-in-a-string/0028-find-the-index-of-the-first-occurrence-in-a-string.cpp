@@ -1,11 +1,11 @@
 class Solution {
 public:
     int strStr(string haystack, string needle) {
-        size_t index = haystack.find(needle);
-        if (index != std::string::npos) {
-            return static_cast<int>(index);
-        } else {
-            return -1;
-        }
+        int x=haystack.size(),y=needle.size();
+        if (y>x) return -1;
+        for(int i=0;i<=x-y;i++){
+            string s=haystack.substr(i,y);
+            if(s==needle) return i;
+        }return -1;
     }
 };
