@@ -13,16 +13,13 @@ public:
             right--;
         }
 
-        // Convert characters to lowercase for comparison
         char leftChar = tolower(s[left]);
         char rightChar = tolower(s[right]);
 
-        // If characters are not equal, return false
         if (leftChar != rightChar) {
             return false;
         }
 
-        // Move pointers towards each other
         left++;
         right--;
     }
