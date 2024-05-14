@@ -11,7 +11,7 @@ public:
             if (j > i + 1 && nums[j] == nums[j - 1]) continue; // skip duplicates
             int left = j + 1, right = n - 1;
             while (left < right) {
-                int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                long long sum = (long long)nums[i] + nums[j] + nums[left] + nums[right];
                 if (sum == target) {
                     result.push_back({nums[i], nums[j], nums[left], nums[right]});
                     while (left < right && nums[left] == nums[left + 1]) ++left; // skip duplicates
