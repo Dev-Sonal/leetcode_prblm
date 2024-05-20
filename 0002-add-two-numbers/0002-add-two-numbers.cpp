@@ -32,6 +32,6 @@ public:
             current = current->next;  // Move to the next node
         }
 
-        return dummy.next;  // The result list starts from dummy.next
+        return dummy.next;
     }
 };
