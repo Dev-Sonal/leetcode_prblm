@@ -5,7 +5,6 @@ public:
     int right = s.length() - 1;
 
     while (left < right) {
-        // Skip non-alphanumeric characters
         while (left < right && !isalnum(s[left])) {
             left++;
         }
