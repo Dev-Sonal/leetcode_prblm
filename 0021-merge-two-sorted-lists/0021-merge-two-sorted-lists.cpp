@@ -25,13 +25,12 @@ public:
             current = current->next;
         }
 
-        // Append the remaining nodes of list1 or list2
         if (list1 != nullptr) {
             current->next = list1;
         } else {
             current->next = list2;
         }
 
-        return dummy.next;  // The merged list starts from dummy.next
+        return dummy.next;  
     }
 };
