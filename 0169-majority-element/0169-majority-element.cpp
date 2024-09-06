@@ -7,7 +7,7 @@ public:
             if (count==0){
                 cand=nums[i];
             }
-            else if (cand==nums[i]){
+            if (cand==nums[i]){
                 count++;
             }
             else{
