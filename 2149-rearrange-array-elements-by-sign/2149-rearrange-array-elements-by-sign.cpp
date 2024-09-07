@@ -1,18 +1,17 @@
 class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
-        int n=nums.size();
-        vector<int> ans(n);
-        int pos=0,neg=1;
-        for(int i=0;i<n;i++){
-            if (nums[i]>0){
-                ans[pos]=nums[i];
-                pos=pos+2;
+         int pos = 0, neg = 1;
+        while (pos < nums.size() && neg < nums.size()) {
+            // Find the first misplaced positive number
+            while (pos < nums.size() && nums[pos] > 0) pos += 2;
+            // Find the first misplaced negative number
+            while (neg < nums.size() && nums[neg] < 0) neg += 2;
+
+            // Swap them if both pos and neg are valid
+            if (pos < nums.size() && neg < nums.size()) {
+                swap(nums[pos], nums[neg]);
             }
-            else{
-                ans[neg]=nums[i];
-                neg=neg+2;
-            }
-        }return ans;
+        }return nums;
     }
 };
